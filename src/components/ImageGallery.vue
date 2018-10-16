@@ -88,6 +88,7 @@
       $.ajax({
         url: 'https://picsum.photos/list',
         error: () => {
+          this.errors = ['Failed to fetch image list. Please try again later.']
         },
         success: (response) => {
           if (response && isArray(response) && response.length) {
